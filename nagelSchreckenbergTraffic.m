@@ -5,7 +5,7 @@ function nagelSchreckenbergTraffic(cars, v_max, p, slots, steps, burn)
     results = zeros(steps, cars);
     
     % Set up initial car positions
-    dist = slots / cars;
+    dist = floor(slots / cars);
     for l = 1:cars
         x(l) = (l-1) * dist;
     end
